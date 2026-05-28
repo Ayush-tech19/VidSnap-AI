@@ -1,50 +1,41 @@
-🎬 VidSnapAI
-An AI-powered Reel Generator built using Python, Flask, FFmpeg, and ElevenLabs API 🚀
-This project allows users to upload images, enter text, and automatically generate reel-style videos with realistic AI-generated voice narration.
-✨ Features
+🎬 VidSnapAI (AI Reel Generator)
+An AI-powered Flask application that generates reel-style videos from images and text using FFmpeg and ElevenLabs API.
+🚀 Features
 Upload multiple images
 Generate AI voice from text
 Automatic reel generation
 FFmpeg video processing
 Dynamic gallery page
 Flask-based web interface
-🛠️ Tech Stack
-Python
+🛠️ Requirements
+Python 3.x
 Flask
-HTML/CSS
 FFmpeg
 ElevenLabs API
-📂 Project Workflow
-🔹 main.py
-Handles Flask routes, file uploads, UUID folder creation, and user input storage.
-🔹 text_to_audio.py
-Converts user text into AI-generated speech using the ElevenLabs API.
-🔹 generate_process.py
-Processes uploaded files and generates reels automatically using FFmpeg.
-🔹 templates/
-Contains frontend HTML templates for the UI and gallery pages.
-🚀 Installation
-Clone the repository:
-Bash
-git clone https://github.com/your-username/VidSnapAI.git
-cd VidSnapAI
+Requests library
 Install dependencies:
 Bash
 pip install -r requirements.txt
-Add your ElevenLabs API key inside config.py
+📂 Project Structure
+Bash
+main.py
+text_to_audio.py
+generate_process.py
+templates/
+static/
+config.py
+⚙️ How to Use
+1. Clone Repository
+Bash
+git clone https://github.com/your-username/VidSnapAI.git
+cd VidSnapAI
+2. Add API Key
+Inside config.py
 Python
 ELEVENLABS_API_KEY = "YOUR_API_KEY"
-Run the Flask app:
+3. Run Flask App
 Bash
 python main.py
-Start the reel generation process:
+4. Start Reel Generation Process
 Bash
 python generate_process.py
-📚 Learning Outcomes
-Flask backend development
-API integration
-File handling in Python
-FFmpeg automation
-AI voice generation
-👨‍💻 Author
-Ayush 🚀
