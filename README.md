@@ -1,70 +1,50 @@
-🎬 VidSnapAI – AI Powered Reel Generator
-An AI-powered web application that transforms simple images and text into engaging reel-style videos automatically using Flask, FFmpeg, and ElevenLabs AI Voice API 🚀
-This project allows users to upload multiple images, enter a script or caption, and generate a complete vertical reel with realistic AI-generated voice narration.
-
+🎬 VidSnapAI
+An AI-powered Reel Generator built using Python, Flask, FFmpeg, and ElevenLabs API 🚀
+This project allows users to upload images, enter text, and automatically generate reel-style videos with realistic AI-generated voice narration.
 ✨ Features
-📤 Upload multiple images
-🧠 Convert text into realistic AI voice
-🎬 Automatically generate vertical reels
-⚡ FFmpeg-based video processing
-🖼️ Dynamic reel gallery page
-🔄 Automated reel generation pipeline
-📁 Unique folder creation using UUID
-🌐 Clean Flask web interface
-
+Upload multiple images
+Generate AI voice from text
+Automatic reel generation
+FFmpeg video processing
+Dynamic gallery page
+Flask-based web interface
 🛠️ Tech Stack
-Technology     Usage
-Python 🐍     Core backend logic
-Flask          Web framework
-HTML/CSS       Frontend UI
-FFmpeg         vedio genration
-ElevenLabs API  AI voice generation
-
-
-📂 Project Structure
-VidSnapAI/
-│
-├── static/
-│   ├── reels/              # Generated reels
-│   └── songs/              # Images & assets
-│
-├── templates/
-│   ├── base.html
-│   ├── create.html
-│   ├── gallery.html
-│   └── index.html
-│
-├── user_uploads/           # User uploaded files
-│
-├── config.py               # API configuration
-├── main.py                 # Flask backend
-├── text_to_audio.py        # AI voice generation
-├── generate_process.py     # Reel generation pipeline
-├── ffmpeg_command.txt
-└── done.txt
-
-⚙️ Working Flow
-1️⃣ Upload Images & Text
-Users upload multiple images and enter text/script through the Flask frontend interface.
-2️⃣ Backend File Handling (main.py)
-This file handles:
-Flask routing
-Multiple file uploads
-UUID-based folder creation
-Saving images and text data
-Managing user input
-3️⃣ AI Voice Generation (text_to_audio.py)
-This module:
-Connects with the ElevenLabs API
-Converts user text into realistic AI speech
-Applies custom voice settings
-Saves generated audio as .mp3
-4️⃣ Reel Generation (generate_process.py)
-This script continuously:
-Monitors uploaded folders
-Reads image/audio data
-Executes FFmpeg commands
-Combines images + audio
-Generates vertical reel videos automatically
-5️⃣ Gallery Display
-Generated reels are dynamically displayed inside the gallery page using Flask templates
+Python
+Flask
+HTML/CSS
+FFmpeg
+ElevenLabs API
+📂 Project Workflow
+🔹 main.py
+Handles Flask routes, file uploads, UUID folder creation, and user input storage.
+🔹 text_to_audio.py
+Converts user text into AI-generated speech using the ElevenLabs API.
+🔹 generate_process.py
+Processes uploaded files and generates reels automatically using FFmpeg.
+🔹 templates/
+Contains frontend HTML templates for the UI and gallery pages.
+🚀 Installation
+Clone the repository:
+Bash
+git clone https://github.com/your-username/VidSnapAI.git
+cd VidSnapAI
+Install dependencies:
+Bash
+pip install -r requirements.txt
+Add your ElevenLabs API key inside config.py
+Python
+ELEVENLABS_API_KEY = "YOUR_API_KEY"
+Run the Flask app:
+Bash
+python main.py
+Start the reel generation process:
+Bash
+python generate_process.py
+📚 Learning Outcomes
+Flask backend development
+API integration
+File handling in Python
+FFmpeg automation
+AI voice generation
+👨‍💻 Author
+Ayush 🚀
